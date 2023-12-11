@@ -16,8 +16,27 @@ public class ComputationResult {
 
 	@Override
 	public String toString() {
-		// TODO Luokan tulostus
-		return "";
+		StringBuilder rakentaja = new StringBuilder();
+		
+		rakentaja.append("Kesikarvo sulkemis hinta: ");
+		rakentaja.append(kesikarvoSulkemisHinta);
+		rakentaja.append("\nKesikarvo avaus hinta: ");
+		rakentaja.append(kesikarvoAvausHinta);
+		rakentaja.append("\nKesikarvo korkein hinta: ");
+		rakentaja.append(kesikarvoKorkeinHinta);
+		rakentaja.append("\nKesikarvo matalin hinta: ");
+		rakentaja.append(kesikarvoMatalinHinta);
+		
+		rakentaja.append("Keskihajonta sulkemis hinta: ");
+		rakentaja.append(keskihajontaSulkemisHinta);
+		rakentaja.append("\nKeskihajonta avaus hinta: ");
+		rakentaja.append(keskihajontaAvausHinta);
+		rakentaja.append("\nKeskihajonta korkein hinta: ");
+		rakentaja.append(keskihajontaKorkeinHinta);
+		rakentaja.append("\nKeskihajonta matalin hinta: ");
+		rakentaja.append(keskihajontaMatalinHinta);
+		
+		return rakentaja.toString();
 	}
 
 	public double getKesikarvoSulkemisHinta() {

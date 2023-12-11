@@ -10,7 +10,7 @@ java -jar HintaAnalysointiOhjelma.jar
 
 2. Anna ohjelmalle polku tiedostoon
 - Kohtaan ```<Polku tiedostoon>``` laitetaan tiedoston polku
-    - Tiedostosta tulee löytyä seuraavat sarakkeet samassa järjestuksessä:
+    - Tiedostosta tulee löytyä seuraavat sarakkeet samassa järjestyksessä:
         - Päiväys
         - Sulkemishinta
         - Avaushinta

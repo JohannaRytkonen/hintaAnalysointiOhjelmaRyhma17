@@ -14,12 +14,18 @@ public class ComputationResult {
 	private double keskihajontaKorkeinHinta;
 	private double keskihajontaMatalinHinta;
 
+	@Override
+	public String toString() {
+		// TODO Luokan tulostus
+		return "";
+	}
+
 	public double getKesikarvoSulkemisHinta() {
 		return kesikarvoSulkemisHinta;
 	}
 
 	public void setKesikarvoSulkemisHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		// TODO:
 	}
 
 	public double getKesikarvoAvausHinta() {
@@ -27,7 +33,7 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoAvausHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		// TODO:
 	}
 
 	public double getKesikarvoKorkeinHinta() {
@@ -35,7 +41,7 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoKorkeinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		// TODO:
 	}
 
 	public double getKesikarvoMatalinHinta() {
@@ -43,7 +49,7 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoMatalinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		// TODO:
 	}
 
 	public double getKeskihajontaSulkemisHinta() {
@@ -51,7 +57,23 @@ public class ComputationResult {
 	}
 
 	public void setKeskihajontaSulkemisHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getSulkemisHinta();
+		}
+
+		double ekaKeskarvo = ekaSumma / paivaHintaRivit.size();
+
+		double tokaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			tokaSumma += Math.pow(paivanHinta.getSulkemisHinta() - ekaKeskarvo, 2);
+		}
+
+		double tokaKeskarvo = tokaSumma / paivaHintaRivit.size();
+
+		keskihajontaSulkemisHinta = Math.sqrt(tokaKeskarvo);
 	}
 
 	public double getKeskihajontaAvausHinta() {
@@ -59,7 +81,23 @@ public class ComputationResult {
 	}
 
 	public void setKeskihajontaAvausHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getAvausHinta();
+		}
+
+		double ekaKeskarvo = ekaSumma / paivaHintaRivit.size();
+
+		double tokaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			tokaSumma += Math.pow(paivanHinta.getAvausHinta() - ekaKeskarvo, 2);
+		}
+
+		double tokaKeskarvo = tokaSumma / paivaHintaRivit.size();
+
+		keskihajontaAvausHinta = Math.sqrt(tokaKeskarvo);
 	}
 
 	public double getKeskihajontaKorkeinHinta() {
@@ -67,7 +105,23 @@ public class ComputationResult {
 	}
 
 	public void setKeskihajontaKorkeinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getKorkeinHinta();
+		}
+
+		double ekaKeskarvo = ekaSumma / paivaHintaRivit.size();
+
+		double tokaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			tokaSumma += Math.pow(paivanHinta.getKorkeinHinta() - ekaKeskarvo, 2);
+		}
+
+		double tokaKeskarvo = tokaSumma / paivaHintaRivit.size();
+
+		keskihajontaKorkeinHinta = Math.sqrt(tokaKeskarvo);
 	}
 
 	public double getKeskihajontaMatalinHinta() {
@@ -75,7 +129,23 @@ public class ComputationResult {
 	}
 
 	public void setKeskihajontaMatalinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO: 
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getMatalinHinta();
+		}
+
+		double ekaKeskarvo = ekaSumma / paivaHintaRivit.size();
+
+		double tokaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			tokaSumma += Math.pow(paivanHinta.getMatalinHinta() - ekaKeskarvo, 2);
+		}
+
+		double tokaKeskarvo = tokaSumma / paivaHintaRivit.size();
+
+		keskihajontaMatalinHinta = Math.sqrt(tokaKeskarvo);
 	}
 
 }

@@ -13,11 +13,10 @@ public class ParseManager {
 			
 			PriceTick paivanHinnat = new PriceTick();
 			
-			// TODO: tarvitaan PriceTicker luokkaa
-//			paivanHinnat.setSulkemisHinta(Double.parseDouble(osat[1]));
-//			paivanHinnat.setAvausHinta(Double.parseDouble(osat[2]));
-//			paivanHinnat.setKorkeinHinta(Double.parseDouble(osat[3]));
-//			paivanHinnat.setMatalinHinta(Double.parseDouble(osat[4]));
+			paivanHinnat.setSulkemisHinta(Double.parseDouble(osat[1]));
+			paivanHinnat.setAvausHinta(Double.parseDouble(osat[2]));
+			paivanHinnat.setKorkeinHinta(Double.parseDouble(osat[3]));
+			paivanHinnat.setMatalinHinta(Double.parseDouble(osat[4]));
 			
 			hintaRivit.add(paivanHinnat);
 		}

@@ -16,7 +16,7 @@ java -jar HintaAnalysointiOhjelma.jar
         - Avaushinta
         - Suurin hinta
         - Matalin hinta
-    - Tiedoston ensimmäinen rivi täytyy olla otsikoille
+    - Tiedoston ensimmäisellä rivillä on oltava sarakkeiden otsikot
     - Tiedot on oltava puolipisteellä eroteltu
     - Voit käyttää esimerkki tiedostoa apuna (tiedoston nimi: AAPL_Historical_Data.csv, löytyy repository:sta)
 ```

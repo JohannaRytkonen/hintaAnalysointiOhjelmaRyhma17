@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 public class EnvManager {
-	public static DecimalFormat desimaaliFormatoija() {
+	public static DecimalFormat getDesimaaliFormatoija() {
 		DecimalFormatSymbols fomatointiSymbolit = new DecimalFormatSymbols();
 		fomatointiSymbolit.setDecimalSeparator('.');
 		

@@ -1,5 +1,6 @@
 package hintaAnalysointiOhjelma;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ComputationResult {
@@ -16,25 +17,26 @@ public class ComputationResult {
 
 	@Override
 	public String toString() {
+		DecimalFormat decimaaliFormatoija = EnvManager.getDesimaaliFormatoija();
 		StringBuilder rakentaja = new StringBuilder();
 		
 		rakentaja.append("Kesikarvo sulkemis hinta: ");
-		rakentaja.append(kesikarvoSulkemisHinta);
+		rakentaja.append(decimaaliFormatoija.format(kesikarvoSulkemisHinta));
 		rakentaja.append("\nKesikarvo avaus hinta: ");
-		rakentaja.append(kesikarvoAvausHinta);
+		rakentaja.append(decimaaliFormatoija.format(kesikarvoAvausHinta));
 		rakentaja.append("\nKesikarvo korkein hinta: ");
-		rakentaja.append(kesikarvoKorkeinHinta);
+		rakentaja.append(decimaaliFormatoija.format(kesikarvoKorkeinHinta));
 		rakentaja.append("\nKesikarvo matalin hinta: ");
-		rakentaja.append(kesikarvoMatalinHinta);
+		rakentaja.append(decimaaliFormatoija.format(kesikarvoMatalinHinta));
 		
-		rakentaja.append("Keskihajonta sulkemis hinta: ");
-		rakentaja.append(keskihajontaSulkemisHinta);
+		rakentaja.append("\nKeskihajonta sulkemis hinta: ");
+		rakentaja.append(decimaaliFormatoija.format(keskihajontaSulkemisHinta));
 		rakentaja.append("\nKeskihajonta avaus hinta: ");
-		rakentaja.append(keskihajontaAvausHinta);
+		rakentaja.append(decimaaliFormatoija.format(keskihajontaAvausHinta));
 		rakentaja.append("\nKeskihajonta korkein hinta: ");
-		rakentaja.append(keskihajontaKorkeinHinta);
+		rakentaja.append(decimaaliFormatoija.format(keskihajontaKorkeinHinta));
 		rakentaja.append("\nKeskihajonta matalin hinta: ");
-		rakentaja.append(keskihajontaMatalinHinta);
+		rakentaja.append(decimaaliFormatoija.format(keskihajontaMatalinHinta));
 		
 		return rakentaja.toString();
 	}
@@ -44,7 +46,13 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoSulkemisHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO:
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getSulkemisHinta();
+		}
+
+		kesikarvoSulkemisHinta = ekaSumma / paivaHintaRivit.size();
 	}
 
 	public double getKesikarvoAvausHinta() {
@@ -52,7 +60,13 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoAvausHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO:
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getAvausHinta();
+		}
+
+		kesikarvoAvausHinta = ekaSumma / paivaHintaRivit.size();
 	}
 
 	public double getKesikarvoKorkeinHinta() {
@@ -60,7 +74,13 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoKorkeinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO:
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getKorkeinHinta();
+		}
+
+		kesikarvoKorkeinHinta = ekaSumma / paivaHintaRivit.size();
 	}
 
 	public double getKesikarvoMatalinHinta() {
@@ -68,7 +88,13 @@ public class ComputationResult {
 	}
 
 	public void setKesikarvoMatalinHinta(ArrayList<PriceTick> paivaHintaRivit) {
-		// TODO:
+		double ekaSumma = 0;
+
+		for (PriceTick paivanHinta : paivaHintaRivit) {
+			ekaSumma += paivanHinta.getMatalinHinta();
+		}
+
+		kesikarvoMatalinHinta = ekaSumma / paivaHintaRivit.size();
 	}
 
 	public double getKeskihajontaSulkemisHinta() {

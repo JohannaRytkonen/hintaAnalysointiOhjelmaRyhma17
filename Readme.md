@@ -12,8 +12,8 @@ java -jar HintaAnalysointiOhjelma.jar
 - Kohtaan ```<Polku tiedostoon>``` laitetaan tiedoston polku
     - Tiedostosta tulee löytyä seuraavat sarakkeet samassa järjestuksessä:
         - Päiväys
-        - Sulkemis hinta
-        - Avaus hinta
+        - Sulkemishinta
+        - Avaushinta
         - Suurin hinta
         - Matalin hinta
     - Tiedoston ensimmäinen rivi täytyy olla otsikoille

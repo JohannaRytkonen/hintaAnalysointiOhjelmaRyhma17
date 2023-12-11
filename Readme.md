@@ -18,7 +18,7 @@ java -jar HintaAnalysointiOhjelma.jar
         - Matalin hinta
     - Tiedoston ensimmäisellä rivillä on oltava sarakkeiden otsikot
     - Tiedot on oltava puolipisteellä eroteltu
-    - Voit käyttää esimerkki tiedostoa apuna (tiedoston nimi: AAPL_Historical_Data.csv, löytyy repository:sta)
+    - Voit käyttää esimerkkitiedostoa apuna (tiedoston nimi: AAPL_Historical_Data.csv, löytyy repository:sta)
 ```
 Tidedosto polku: <Polku tiedostoon>
 ```

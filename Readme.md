@@ -28,8 +28,8 @@ Tidedosto polku: <Polku tiedostoon>
 ```
 Kesikarvo sulkemis hinta: x.xx
 Kesikarvo avaus hinta: x.xx
-Average high price: x.xx
 Kesikarvo korkein hinta: x.xx
+Kesikarvo matalin hinta: x.xx
 Keskihajonta sulkemis hinta: x.xx
 Keskihajonta avaus hinta: x.xx
 Keskihajonta korkein hinta: x.xx
